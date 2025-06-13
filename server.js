@@ -3,6 +3,7 @@ import express from "express";
 import dotenv from "dotenv";
 import uploadRoute from "./routes/upload.js";
 import connectDB from "./utils/db.js";
+import { cpus } from "os";
 
 dotenv.config();
 
@@ -17,5 +18,6 @@ app.use("/api/upload", uploadRoute); // 👈 Mount the upload route
 app.get("/", (req, res) => res.send("API is working ✅"));
 
 app.listen(PORT, () => {
+  console.log(cpus().length);
   console.log(`Server running on port ${PORT}`);
 });
