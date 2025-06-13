@@ -1,5 +1,5 @@
 import File from "../models/File.js";
-import { uploadToStreamtape } from "../utils/streamtape.js";
+import { uploadToStreamtape } from "../utils/uploadToStreamtape.js";
 
 export const uploadFile = async (req, res) => {
   try {
